@@ -12,8 +12,8 @@
     'hero.sub': 'Sinh viên năm cuối ngành Hệ thống thông tin quản lý, ứng tuyển thực tập BA / DA, có bốn năm làm vận hành bán hàng.',
     'hero.cta': 'Xem dự án',
     'cv': 'Tải CV',
-    'cv.ba': 'CV - Business Analyst',
-    'cv.da': 'CV - Data Analyst',
+    'cv.ba': 'CV - Phân tích nghiệp vụ (BA)',
+    'cv.da': 'CV - Phân tích dữ liệu (DA)',
     'stat.dax': 'công thức DAX trong một mô hình Power BI',
     'stat.tests': 'unit test tự động cho tầng nghiệp vụ C#',
     'stat.cases': 'test case đạt, gồm SQL injection, XSS, CSRF',
@@ -89,6 +89,10 @@
     document.title = lang === 'vi' ? 'Nguyễn Hữu An | Business & Data Analyst' : 'An Nguyen Huu (Aaron Nguyen) | Business & Data Analyst';
     document.querySelectorAll('[data-lang]').forEach(function (b) {
       b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+    });
+    // CV links: English CV in English mode, Vietnamese CV in Vietnamese mode
+    document.querySelectorAll('[data-cv-en]').forEach(function (a) {
+      a.setAttribute('href', lang === 'vi' ? a.dataset.cvVi : a.dataset.cvEn);
     });
     store('lang', lang);
   }

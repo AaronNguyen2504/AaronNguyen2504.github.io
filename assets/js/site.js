@@ -1,6 +1,9 @@
 // Language toggle (EN/VI), theme toggle and scroll reveal. No dependencies.
 (function () {
   var VI = {
+    'brand': 'Nguyễn Hữu An',
+    'brand.alt': '',
+    'brand.full': 'Nguyễn Hữu An',
     'skip': 'Chuyển đến dự án',
     'nav.work': 'Dự án',
     'nav.about': 'Giới thiệu',
@@ -81,8 +84,9 @@
 
   function setLang(lang) {
     var dict = lang === 'vi' ? VI : EN;
-    nodes.forEach(function (n) { var t = dict[n.dataset.i18n]; if (t) n.textContent = t; });
+    nodes.forEach(function (n) { var t = dict[n.dataset.i18n]; if (t !== undefined) { n.textContent = t; n.hidden = t === ''; } });
     document.documentElement.lang = lang;
+    document.title = lang === 'vi' ? 'Nguyễn Hữu An | Business & Data Analyst' : 'An Nguyen Huu (Aaron Nguyen) | Business & Data Analyst';
     document.querySelectorAll('[data-lang]').forEach(function (b) {
       b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
     });

@@ -1,6 +1,6 @@
 # aaronnguyen2504.github.io
 
-Personal portfolio of **Nguyen Huu An**, Management Information Systems student and Business / Data Analyst intern candidate in Ho Chi Minh City.
+Personal portfolio of **An Nguyen Huu (Aaron Nguyen)**, Management Information Systems student and Business / Data Analyst intern candidate in Ho Chi Minh City.
 
 Live: <https://aaronnguyen2504.github.io/>
 
